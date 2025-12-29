@@ -12,8 +12,10 @@ return {
     requiredItem = 'cryptostick',
     
     -- Crypto amount to give per crypto stick (configurable)
-    cryptoAmount.min = 100,
-    cryptoAmount.max = 1000,
+    cryptoAmount = {
+        min = 100,
+        max = 1000
+    },
     
     -- Hacking minigame settings
     hacking = {

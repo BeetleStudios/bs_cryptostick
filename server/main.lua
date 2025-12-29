@@ -53,8 +53,9 @@ RegisterNetEvent('ns-cryptostick:server:convertCrypto', function()
     end
     
     -- Add crypto to player
-    Player.Functions.AddMoney('crypto', math.random(config.cryptoAmount.min, config.cryptoAmount.max), 'crypto_stick_conversion')
-    exports.qbx_core:Notify(src, locale('success.converted', config.cryptoAmount), 'success')
+    local cryptoAmount = math.random(config.cryptoAmount.min, config.cryptoAmount.max)
+    Player.Functions.AddMoney('crypto', cryptoAmount, 'crypto_stick_conversion')
+    exports.qbx_core:Notify(src, locale('success.converted', cryptoAmount), 'success')
     TriggerClientEvent('inventory:client:ItemBox', src, exports.ox_inventory:Items()[config.requiredItem], 'remove')
 end)
 
