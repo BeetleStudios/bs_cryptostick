@@ -1,0 +1,16 @@
+{
+    "info": {
+        "use_laptop": "Use Laptop"
+    },
+    "success": {
+        "converted": "Successfully converted crypto stick to $%s crypto!"
+    },
+    "error": {
+        "not_at_location": "You must be at Lester's house to use this laptop",
+        "no_crypto_stick": "You don't have a crypto stick",
+        "hacking_failed": "Hacking failed! Try again.",
+        "remove_item_failed": "Failed to remove crypto stick",
+        "player_not_found": "Player data not found"
+    }
+}
+

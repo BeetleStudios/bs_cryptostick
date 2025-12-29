@@ -1,0 +1,25 @@
+fx_version 'cerulean'
+game 'gta5'
+
+description 'ns-cryptostick - Convert crypto sticks to crypto'
+repository 'https://github.com/your-repo/ns-cryptostick'
+version '1.0.0'
+
+shared_scripts {
+    '@ox_lib/init.lua',
+}
+
+client_script 'client/main.lua'
+
+server_scripts {
+    '@oxmysql/lib/MySQL.lua',
+    'server/main.lua',
+}
+
+files {
+    'config/shared.lua',
+    'locales/*.json'
+}
+
+lua54 'yes'
+ox_lib 'locale'
