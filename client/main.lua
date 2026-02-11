@@ -10,14 +10,14 @@ local function createLaptopZone(coords, size, heading)
     
     if config.useTarget then
         local zoneId = exports.ox_target:addBoxZone({
-            name = 'cryptostick_laptop',
+            name = 'bs_cryptostick_laptop',
             coords = coords,
             size = size,
             rotation = heading,
             debug = config.lesterHouse.debugPoly,
             options = {
                 {
-                    name = 'cryptostick_laptop_interact',
+                    name = 'bs_cryptostick_laptop_interact',
                     icon = 'fas fa-laptop',
                     label = locale('info.use_laptop'),
                     distance = config.lesterHouse.distance,
@@ -28,7 +28,7 @@ local function createLaptopZone(coords, size, heading)
                         return true
                     end,
                     onSelect = function()
-                        TriggerServerEvent('ns-cryptostick:server:checkItem')
+                        TriggerServerEvent('bs_cryptostick:server:checkItem')
                     end
                 }
             }
@@ -36,7 +36,7 @@ local function createLaptopZone(coords, size, heading)
         zoneCreated = true
     else
         lib.zones.box({
-            name = 'cryptostick_laptop',
+            name = 'bs_cryptostick_laptop',
             coords = coords,
             size = size,
             rotation = heading,
@@ -52,7 +52,7 @@ local function createLaptopZone(coords, size, heading)
             inside = function()
                 if IsControlJustPressed(0, 38) and not isHacking then -- E key
                     lib.hideTextUI()
-                    TriggerServerEvent('ns-cryptostick:server:checkItem')
+                    TriggerServerEvent('bs_cryptostick:server:checkItem')
                 end
             end
         })
@@ -78,7 +78,7 @@ CreateThread(function()
 end)
 
 -- Start hacking minigame
-RegisterNetEvent('ns-cryptostick:client:startHacking', function()
+RegisterNetEvent('bs_cryptostick:client:startHacking', function()
     if isHacking then
         return
     end
@@ -93,10 +93,9 @@ RegisterNetEvent('ns-cryptostick:client:startHacking', function()
         
         if success then
             -- Notify server that hacking was successful
-            TriggerServerEvent('ns-cryptostick:server:convertCrypto')
+            TriggerServerEvent('bs_cryptostick:server:convertCrypto')
         else
             exports.qbx_core:Notify(locale('error.hacking_failed'), 'error')
         end
     end)
 end)
-

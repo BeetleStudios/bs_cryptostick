@@ -1,4 +1,4 @@
-# ns-cryptostick
+# bs_cryptostick
 
 A FiveM resource that allows players to convert crypto sticks into crypto currency at Lester's house using a hacking minigame.
 
@@ -13,7 +13,7 @@ A FiveM resource that allows players to convert crypto sticks into crypto curren
 
 1. Place this resource in your `[standalone]` folder
 2. Ensure `mhacking` resource is started (should be in `[standalone]` folder)
-3. Add `ensure ns-cryptostick` to your server.cfg
+3. Add `ensure bs_cryptostick` to your server.cfg
 4. Make sure you have a `cryptostick` item in your inventory system
 
 ## Configuration
@@ -43,7 +43,7 @@ Edit `config/shared.lua` to customize:
 ## Usage
 
 1. Players go to Lester's house
-2. Interact with the laptop
+2. Interact with the PC
 3. Complete the hacking minigame
 4. Crypto stick is removed and crypto is added to their account
 
@@ -52,4 +52,3 @@ Edit `config/shared.lua` to customize:
 For support, questions, or bug reports, please join our Discord server:
 
 [Discord Support Server](https://discord.gg/xSCBAYFwmY)
-

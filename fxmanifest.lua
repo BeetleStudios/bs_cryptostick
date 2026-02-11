@@ -1,8 +1,8 @@
 fx_version 'cerulean'
 game 'gta5'
 
-description 'ns-cryptostick - Convert crypto sticks to crypto'
-repository 'https://github.com/your-repo/ns-cryptostick'
+description 'bs_cryptostick - Convert crypto sticks to crypto'
+repository 'https://github.com/your-repo/bs_cryptostick'
 version '1.0.0'
 
 shared_scripts {

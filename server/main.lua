@@ -45,7 +45,7 @@ local function addCryptoToPlayer(src)
 end
 
 -- Check if player has crypto stick and is at Lester's house
-RegisterNetEvent('ns-cryptostick:server:checkItem', function()
+RegisterNetEvent('bs_cryptostick:server:checkItem', function()
     local src = source
     
     -- Verify player is at Lester's house
@@ -63,11 +63,11 @@ RegisterNetEvent('ns-cryptostick:server:checkItem', function()
     end
     
     -- Start hacking minigame on client
-    TriggerClientEvent('ns-cryptostick:client:startHacking', src)
+    TriggerClientEvent('bs_cryptostick:client:startHacking', src)
 end)
 
 -- Convert crypto stick to crypto after successful hack
-RegisterNetEvent('ns-cryptostick:server:convertCrypto', function()
+RegisterNetEvent('bs_cryptostick:server:convertCrypto', function()
     local src = source
     local Player = exports.qbx_core:GetPlayer(src)
     
@@ -118,4 +118,3 @@ if config.cryptoProvider == 'qbx' then
         exports.qbx_core:Notify(source, string.format('Your crypto balance: $%s', cryptoBalance), 'primary')
     end)
 end
-

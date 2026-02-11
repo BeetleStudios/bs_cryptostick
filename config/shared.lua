@@ -1,5 +1,5 @@
 return {
-    -- Lester's house location (where the laptop is)
+    -- Lester's house location (where the pc is)
     lesterHouse = {
         coords = vector3(1275.58, -1710.48, 54.77),
         size = vector3(2, 2, 1.0),
@@ -38,4 +38,3 @@ return {
         amountChance = .1
     }
 }
-
